@@ -9,7 +9,6 @@ browser = webdriver.Chrome(r'CHROMEDRIVER PATH') # https://sites.google.com/a/ch
 browser.get(link)
 
 def start():
-
     browser.switch_to.default_content()
     
     browser.switch_to.frame(0)
@@ -19,7 +18,7 @@ def start():
     wordlist = re.findall(">([a-z]*)</", str(wordlist))
 
     input_box = browser.find_element_by_xpath('//*[@id="game"]/div[3]/div[2]/div[2]/div[1]/input')
-
+    
     start = input('> Press ENTER when the game started ')
     for word in wordlist:
         try:
